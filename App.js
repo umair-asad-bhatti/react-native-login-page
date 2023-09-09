@@ -1,5 +1,5 @@
 
-import { Button, StyleSheet, Text, View, Image, Alert } from 'react-native';
+import { Button, StyleSheet, Text, View, Image, Alert, TouchableOpacity } from 'react-native';
 import { TextInput } from 'react-native';
 export default function App() {
   const handlepress = () => {
@@ -31,11 +31,20 @@ export default function App() {
           <TextInput placeholder='Password*' style={styles.input}>
           </TextInput>
         </View>
+        <View style={styles.input_view}>
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={handlepress}
+          >
+            <Text style={styles.button_text}>Login</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-      <View style={styles.button_container}>
-        <Button onPress={handlepress} style={styles.button} title="Login">
-        </Button>
-      </View>
+
+
+
+
     </View>
   );
 }
@@ -84,15 +93,24 @@ const styles = StyleSheet.create({
     color: 'gray'
 
   },
-  button_container: {
-    flex: 0.1,
-    // backgroundColor: 'purple',
-    alignItems: 'center',
-    justifyContent: 'center',
+
+  button: {
+    padding: 1,
+    backgroundColor: '#0d6efd',
+    paddingHorizontal: 15,
+    paddingVertical: 4,
+    borderRadius: 4,
+    // flex:1,
+    // alignItems:'center',
+    // justifyContent:'center',
+    width: '100%',
 
 
   },
-  button: {
-    padding: 1
+  button_text: {
+    color: 'white',
+    fontSize: 18,
+    textAlign: 'center'
+
   }
 });
