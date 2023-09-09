@@ -1,5 +1,5 @@
 
-import { Button, StyleSheet, Text, View, Image, Alert, TouchableOpacity } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, Image, Alert, TouchableOpacity, StatusBar } from 'react-native';
 import { TextInput } from 'react-native';
 export default function App() {
   const handlepress = () => {
@@ -15,52 +15,54 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <View style={styles.logo_container}>
-        <Image resizeMode='contain' style={styles.logo_image} source={require('./assets/logo.svg')} />
-        <Text style={styles.logo_text}>Login</Text>
-      </View>
-      <View style={styles.inputs_container}>
-        <View style={styles.input_view}>
-
-          <Text style={styles.input_label}>Enter Email</Text>
-          <TextInput placeholder='Email*' style={styles.input}>
-          </TextInput>
+      <StatusBar />
+      <ScrollView >
+        <View style={styles.logo_container}>
+          <Image resizeMode='contain' style={styles.logo_image} source={require('./assets/logo.svg')} />
+          <Text style={styles.logo_text}>Login</Text>
         </View>
-        <View style={styles.input_view}>
-          <Text style={styles.input_label}>Enter Password</Text>
-          <TextInput placeholder='Password*' style={styles.input}>
-          </TextInput>
+        <View style={styles.inputs_container}>
+          <View style={styles.input_view}>
+            <Text style={styles.input_label}>Enter Email</Text>
+            <TextInput selectionColor={'black'} placeholder='Email*' style={styles.input}>
+            </TextInput>
+          </View>
+          <View style={styles.input_view}>
+            <Text style={styles.input_label}>Enter Password</Text>
+            <TextInput selectionColor={'black'} placeholder='Password*' style={styles.input}>
+            </TextInput>
+          </View>
+          <View style={styles.input_view}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={handlepress}
+            >
+              <Text style={styles.button_text}>Login</Text>
+            </TouchableOpacity>
+          </View>
         </View>
-        <View style={styles.input_view}>
-
-          <TouchableOpacity
-            style={styles.button}
-            onPress={handlepress}
-          >
-            <Text style={styles.button_text}>Login</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-
-
-
-
+      </ScrollView>
     </View>
+
   );
+
 }
 
 const styles = StyleSheet.create({
   container: {
+
     flex: 1,
+    marginTop: '25%',
     backgroundColor: 'white',
     justifyContent: 'center',
-    gap: 30,
+    gap: 30
 
   },
 
   logo_container: {
     flex: 0.2,
     color: 'white',
+    marginBottom: 40,
     // backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
@@ -74,7 +76,7 @@ const styles = StyleSheet.create({
     // backgroundColor: 'green',
     alignItems: 'center',
     justifyContent: 'center',
-    flex: 0.3,
+    flex: 0.5,
     gap: 20
   },
   input_view: {
