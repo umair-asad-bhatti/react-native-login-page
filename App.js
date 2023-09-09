@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
   },
   logo_text: {
     fontSize: 40,
-    color: 'gray'
   },
   inputs_container: {
     // backgroundColor: 'green',
@@ -81,16 +80,16 @@ const styles = StyleSheet.create({
     // backgroundColor:'red'
   },
   input_label: {
-    color: 'gray'
+
   },
   input: {
     marginTop: 10,
     borderRadius: 4,
     width: '100%',
-    borderColor: 'lightblue',
-    borderWidth: 2,
+    borderColor: '#0d6efd',
+    borderWidth: 1,
     padding: 5,
-    color: 'gray'
+
 
   },
 
