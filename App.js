@@ -16,7 +16,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.logo_container}>
-        <Image source={require('./assets/favicon.png')} />
+        <Image resizeMode='contain' style={styles.logo_image} source={require('./assets/logo.svg')} />
         <Text style={styles.logo_text}>Login</Text>
       </View>
       <View style={styles.inputs_container}>
@@ -67,7 +67,9 @@ const styles = StyleSheet.create({
   },
   logo_text: {
     fontSize: 40,
+    color: '#3B3C36'
   },
+  logo_image: { width: 120, height: 120 },
   inputs_container: {
     // backgroundColor: 'green',
     alignItems: 'center',
