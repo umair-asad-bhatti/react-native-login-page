@@ -77,23 +77,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flex: 0.5,
-    gap: 20
+    gap: 10
   },
   input_view: {
     width: '70%',
     // backgroundColor:'red'
   },
-  input_label: {
-
+  input_label:{
+    marginBottom:5
   },
+
   input: {
-    marginTop: 10,
     borderRadius: 4,
     width: '100%',
     borderColor: '#0d6efd',
     borderWidth: 1,
     padding: 5,
-
 
   },
 
