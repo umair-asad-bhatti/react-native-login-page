@@ -5,14 +5,7 @@ import React from 'react'
 export default function Login() {
     const handlepress = () => {
         console.log("login button is pressed")
-        Alert.alert('Login', 'You pressed the login button', [
-            {
-                text: 'Cancel',
-                onPress: () => console.log('Cancel Pressed'),
-                style: 'cancel',
-            },
-            { text: 'OK', onPress: () => console.log('OK Pressed') },
-        ]);
+       
     }
     return (
         <View style={{ flex: 1}}>
